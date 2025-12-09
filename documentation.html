@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Documentation | Dylan Byrne-Carr</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      padding: 2rem 0;
+      color: #1e293b;
+    }
+    h1 { margin-bottom: 0.25rem; }
+    h2 { margin-top: 2.5rem; margin-bottom: 1rem; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+    h5 { margin-bottom: 0.75rem; color: #334155; }
+    .section-card { margin-bottom: 2rem; }
+    ul { padding-left: 1.25rem; margin-bottom: 0; }
+    li { margin-bottom: 0.4rem; color: #475569; }
+    li strong { color: #1e293b; }
+    a { color: #0891b2; }
+    a:hover { color: #0e7490; }
+    .url-box {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      display: inline-block;
+    }
+    .subtitle { color: #64748b; margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <div class="container" style="max-width: 850px;">
+    
+    <p><a href="index.html">Back to Portfolio</a></p>
+    
+    <h1>Portfolio Documentation</h1>
+    <p class="subtitle">Data Visualisation CA2 - Dylan Byrne-Carr</p>
+
+    <h2>Hosted URL</h2>
+    <div class="url-box">
+      <a href="https://dylanbyrne-carr.github.io/portfolio/" target="_blank">https://dylanbyrne-carr.github.io/portfolio/</a>
+    </div>
+
+    <h2>Bootstrap Components Used</h2>
+    
+    <div class="section-card">
+      <h5>Layout and Structure</h5>
+      <ul>
+        <li><strong>Container</strong> - Responsive fixed-width containers for content sections</li>
+        <li><strong>Grid System (Row/Col)</strong> - 12-column responsive layout throughout</li>
+        <li><strong>Flexbox Utilities</strong> - d-flex, justify-content-between, align-items-center, gap classes</li>
+        <li><strong>Spacing Utilities</strong> - Margin and padding classes (mb-4, py-5, g-4, etc.)</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h5>Navigation</h5>
+      <ul>
+        <li><strong>Navbar</strong> - Fixed-top responsive navigation with brand logo</li>
+        <li><strong>Navbar Collapse</strong> - Mobile hamburger menu with collapsible navigation</li>
+        <li><strong>Navbar Toggler</strong> - Toggle button for mobile navigation</li>
+        <li><strong>Nav Pills/Links</strong> - Navigation link styling</li>
+        <li><strong>Scrollspy</strong> - Automatic active state updates on nav links based on scroll position</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h5>Components</h5>
+      <ul>
+        <li><strong>Modal</strong> - Contact information modal dialog triggered by button</li>
+        <li><strong>Collapse</strong> - Expandable module grade tables in Education section</li>
+        <li><strong>Buttons</strong> - Various button styles (btn, btn-outline, btn-sm)</li>
+        <li><strong>Badges</strong> - Year badges, status indicators, tech stack labels</li>
+        <li><strong>Cards</strong> - Project cards, hobby cards, panel layouts</li>
+        <li><strong>Tables</strong> - Striped tables for module grades</li>
+        <li><strong>Forms</strong> - Contact form with form-control, form-label classes</li>
+        <li><strong>List Group</strong> - Quick Facts panel with list-group-flush styling</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h5>Utilities and Helpers</h5>
+      <ul>
+        <li><strong>Display Utilities</strong> - d-none, d-sm-inline, d-flex for responsive visibility</li>
+        <li><strong>Text Utilities</strong> - text-center, text-muted, fw-bold, text-uppercase</li>
+        <li><strong>Border Utilities</strong> - border, rounded-circle, border-0</li>
+        <li><strong>Position Utilities</strong> - position-relative, position-absolute, fixed-top</li>
+        <li><strong>Responsive Breakpoints</strong> - sm, md, lg, xl breakpoint classes throughout</li>
+      </ul>
+    </div>
+
+    <h2>Custom JavaScript Features</h2>
+    <p class="text-muted mb-3">Dynamic features implemented with vanilla JavaScript, separate from Bootstrap functionality:</p>
+
+    <div class="section-card">
+      <h5>Theme and Appearance</h5>
+      <ul>
+        <li><strong>Dark/Light Theme Toggle</strong> - Persistent theme switching with localStorage</li>
+        <li><strong>Scroll Progress Bar</strong> - Animated progress indicator showing page scroll position</li>
+        <li><strong>Parallax Hero Background</strong> - Background image moves at different rate during scroll</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h5>Animations and Effects</h5>
+      <ul>
+        <li><strong>Typewriter Effect</strong> - Animated text typing in hero section with multiple phrases</li>
+        <li><strong>Animated Counters</strong> - Experience years count up when scrolled into view</li>
+        <li><strong>Card Tilt Effect</strong> - 3D perspective tilt on mouse hover for all cards</li>
+        <li><strong>Staggered Card Animations</strong> - Cards animate in sequence when section becomes visible</li>
+        <li><strong>Section Fade-in</strong> - Sections animate into view using Intersection Observer</li>
+        <li><strong>Skill Bar Animations</strong> - Progress bars animate to their values when visible</li>
+        <li><strong>Skill Tooltips</strong> - Hover tooltips showing percentage values</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h5>Navigation and UX</h5>
+      <ul>
+        <li><strong>Smooth Scroll Navigation</strong> - Smooth scrolling to sections on nav link click</li>
+        <li><strong>Navigation Sliding Indicator</strong> - Animated underline that follows active nav item</li>
+        <li><strong>Back to Top Button</strong> - Appears after scrolling, smooth scrolls to top</li>
+        <li><strong>Active Section Highlighting</strong> - Nav links update based on current scroll position</li>
+        <li><strong>Navbar Scroll State</strong> - Navbar background changes when scrolled</li>
+        <li><strong>Keyboard Navigation</strong> - Number keys 0-7 for quick section jumping</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h5>Interactive Features</h5>
+      <ul>
+        <li><strong>Project Filter System</strong> - Filter projects by year with animated transitions</li>
+        <li><strong>Dynamic Project Modals</strong> - Modal content populated from JavaScript data object</li>
+        <li><strong>Contact Form Validation</strong> - Client-side form validation with toast notifications</li>
+        <li><strong>Copy to Clipboard</strong> - Click to copy email/phone with visual feedback</li>
+        <li><strong>Toast Notifications</strong> - Custom notification system for user feedback</li>
+      </ul>
+    </div>
+
+
+    <h2>Custom CSS Features</h2>
+    <div class="section-card">
+      <ul>
+        <li><strong>CSS Custom Properties</strong> - Theme variables for colors, spacing, transitions</li>
+        <li><strong>Dark/Light Theme System</strong> - Complete dual-theme implementation</li>
+        <li><strong>Glassmorphism Effects</strong> - Backdrop blur on navbar and modals</li>
+        <li><strong>Custom Card System</strong> - Unified .card base class with .card-accent modifier</li>
+        <li><strong>Gradient Overlays</strong> - Hero section and hobby card image overlays</li>
+        <li><strong>Custom Animations</strong> - Keyframe animations for bounce, blink, slide effects</li>
+        <li><strong>Responsive Design</strong> - Mobile-first with custom breakpoint adjustments</li>
+        <li><strong>Reduced Motion Support</strong> - Respects prefers-reduced-motion preference</li>
+      </ul>
+    </div>
+
+    <footer class="text-center mt-5 pt-4 border-top">
+      <p class="text-muted">Dylan Byrne-Carr - Data Visualisation CA2 - December 2025</p>
+    </footer>
+
+  </div>
+</body>
+</html>
