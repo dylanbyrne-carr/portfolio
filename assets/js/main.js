@@ -342,7 +342,7 @@
   if (heroSection && !prefersReducedMotion) {
     window.addEventListener("scroll", () => {
       const scrolled = window.pageYOffset;
-      const rate = scrolled * 0.5;
+      const rate = scrolled * -0.5;
       heroSection.style.setProperty("--parallax-offset", `${rate}px`);
     }, { passive: true });
   }
@@ -402,5 +402,67 @@
       });
     });
   }
+
+  // Scroll Progress Bar ------------------------------------------------------
+  const progressBar = document.createElement("div");
+  progressBar.className = "scroll-progress";
+  document.body.prepend(progressBar);
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    progressBar.style.width = `${progress}%`;
+  }, { passive: true });
+
+  // Card Tilt Effect ---------------------------------------------------------
+  const tiltCards = document.querySelectorAll(".panel, .project-card, .hobby-card");
+  
+  tiltCards.forEach((card) => {
+    card.classList.add("tilt-card");
+    
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -4;
+      const rotateY = ((x - centerX) / centerX) * 4;
+      
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+    });
+    
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+
+  // Staggered Card Animations ------------------------------------------------
+  const staggerContainers = document.querySelectorAll(".row.g-4");
+  
+  staggerContainers.forEach((container) => {
+    const cards = container.querySelectorAll(".col-lg-4, .col-lg-6, .col-md-6");
+    cards.forEach((card, i) => {
+      card.classList.add("stagger-item");
+      card.style.animationDelay = `${i * 0.15}s`;
+    });
+  });
+
+  // Skill Bar Tooltips -------------------------------------------------------
+  const skillBarsTooltip = document.querySelectorAll(".skill-bar[data-level]");
+  
+  skillBarsTooltip.forEach((bar) => {
+    const level = bar.dataset.level;
+    const tooltip = document.createElement("span");
+    tooltip.className = "skill-tooltip";
+    tooltip.textContent = `${level}%`;
+    
+    const parent = bar.parentElement;
+    parent.classList.add("skill-item");
+    parent.style.position = "relative";
+    parent.appendChild(tooltip);
+  });
 
 })();
