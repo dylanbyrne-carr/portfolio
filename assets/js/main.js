@@ -416,7 +416,7 @@
   }, { passive: true });
 
   // Card Tilt Effect ---------------------------------------------------------
-  const tiltCards = document.querySelectorAll(".panel, .project-card, .hobby-card");
+  const tiltCards = document.querySelectorAll(".card");
   
   tiltCards.forEach((card) => {
     card.classList.add("tilt-card");
