@@ -1,1181 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dylan Byrne-Carr | Portfolio</title>
-
-    <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body
-    data-bs-spy="scroll"
-    data-bs-target="#mainNav"
-    data-bs-offset="80"
-    tabindex="0"
-  >
-    <!-- Navigation -->
-    <nav
-      id="mainNav"
-      class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav"
-    >
-      <div class="container">
-        <a class="navbar-brand fw-semibold tracking-wide" href="#hero">
-          <span class="brand-pill me-2"></span>
-          DBC
-        </a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
-          aria-controls="navbarContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dylan Byrne-Carr | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body tabindex="0">
+  <!-- Nav -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#hero"><span class="me-2"></span>dbc</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-lineup">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="btn btn-sm btn-outline-neon ms-lg-3" type="button" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill"></i>
         </button>
+      </div>
+    </div>
+  </nav>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-lineup">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#hobbies">Hobbies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-          <div class="d-flex align-items-center gap-2 ms-lg-3">
-            <button
-              id="themeToggle"
-              class="btn btn-sm btn-outline-neon d-flex align-items-center gap-1"
-              type="button"
-            >
-              <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
-              <span class="d-none d-md-inline">Night Mode</span>
+  <!-- Hero -->
+  <header id="hero" class="hero-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <h1 class="display-3 fw-bold mb-2">dylan <span class="text-outline">byrne-carr</span></h1>
+          <p class="lead mb-1">
+            <span id="typewriter" class="typewriter-text"></span><span class="typewriter-cursor">|</span>
+          </p>
+          <p class="hero-subtitle mb-4">Computing graduate returning to TU Dublin for Honours degree.</p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <div class="stat-chip">
+              <span class="label">Experience</span>
+              <span class="value"><span class="counter" data-target="7">0</span>+ Years</span>
+            </div>
+            <div class="stat-chip">
+              <span class="label">Location</span>
+              <span class="value">Dublin, IE</span>
+            </div>
+            <div class="stat-chip">
+              <span class="label">Status</span>
+              <span class="value live">Open to Work</span>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#projects" class="btn btn-neon"><i class="bi bi-folder me-1"></i>View Projects</a>
+            <button class="btn btn-outline-neon" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+              <i class="bi bi-envelope me-1"></i>Contact
             </button>
           </div>
+          <div class="d-flex gap-3 mt-4">
+            <a href="https://www.linkedin.com/in/dylanbyrnecarr/" target="_blank" class="hero-social"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/dylanbyrne-carr" target="_blank" class="hero-social"><i class="bi bi-github"></i></a>
+            <a href="mailto:dylanbyrnecarr@gmail.com" class="hero-social"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="https://via.placeholder.com/280x280.png?text=Photo" class="rounded-circle img-fluid hero-img" alt="Dylan Byrne-Carr">
         </div>
       </div>
-    </nav>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <i class="bi bi-chevron-down"></i>
+      </a>
+    </div>
+  </header>
 
-    <!-- Hero -->
-    <header id="hero" class="hero-section d-flex align-items-center">
+  <main>
+    <!-- About -->
+    <section id="about" class="section-padding section-fade">
       <div class="container">
-        <div class="row align-items-center g-5">
+        <p class="section-kicker mb-1">01 · Overview</p>
+        <h2 class="section-title mb-4">About Me</h2>
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="panel panel-primary h-100">
+              <div class="panel-header mb-3">Bio</div>
+              <p>I'm a computing graduate from TU Dublin Tallaght, currently returning to complete my Honours degree. I have a strong foundation in full-stack development with experience across Python, C#, React, and database technologies.</p>
+              <p class="mb-0">Beyond academics, I bring 7+ years of progressive experience at McDonald's, advancing from Crew Member to Shift Manager. I also gained hands-on IT experience during a placement at Smurfit Kappa, supporting enterprise infrastructure.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-secondary h-100">
+              <div class="panel-header mb-3">Quick Facts</div>
+              <ul class="list-unstyled mb-0 small">
+                <li class="mb-2"><i class="bi bi-mortarboard me-2 text-accent"></i>TU Dublin Student</li>
+                <li class="mb-2"><i class="bi bi-code-slash me-2 text-accent"></i>Full-Stack Developer</li>
+                <li class="mb-2"><i class="bi bi-geo-alt me-2 text-accent"></i>Based in Dublin</li>
+                <li class="mb-2"><i class="bi bi-briefcase me-2 text-accent"></i>7+ Years Experience</li>
+                <li class="mb-2"><i class="bi bi-people me-2 text-accent"></i>Team Leadership</li>
+                <li class="mb-2"><i class="bi bi-lightning me-2 text-accent"></i>Fast Learner</li>
+                <li class="mb-2"><i class="bi bi-database me-2 text-accent"></i>SQL & Databases</li>
+                <li class="mb-2"><i class="bi bi-cup-hot me-2 text-accent"></i>Coffee Enthusiast</li>
+                <li class="mb-2"><i class="bi bi-controller me-2 text-accent"></i>Gamer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section-padding section-alt section-angled">
+      <div class="container">
+        <p class="section-kicker mb-1">02 · Background</p>
+        <h2 class="section-title mb-4">Education</h2>
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0">TU Dublin - Tallaght Campus</h5>
+                    <span class="badge bg-outline">2025 – 2026</span>
+                  </div>
+                  <p class="text-muted small mb-2">BSc (Hons) Computing with Software Development — Level 8 Add-on</p>
+                  <p class="small mb-2">Returning to complete Honours degree focusing on advanced software development and capstone project.</p>
+                  <button class="btn btn-xs btn-outline-neon" type="button" data-bs-toggle="collapse" data-bs-target="#modules-y4">View Modules</button>
+                  <div class="collapse mt-3" id="modules-y4">
+                    <table class="table table-sm table-dark table-striped mb-0 small">
+                      <thead><tr><th>Module</th><th class="text-end">Grade</th></tr></thead>
+                      <tbody>
+                        <tr><td>Data Visualisation</td><td class="text-end">—</td></tr>
+                        <tr><td>Enterprise Performance Architecture</td><td class="text-end">—</td></tr>
+                        <tr><td>DevOps</td><td class="text-end">—</td></tr>
+                        <tr><td>Software Architecture</td><td class="text-end">—</td></tr>
+                        <tr><td>Year 4 Project</td><td class="text-end">—</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0">TU Dublin - Tallaght Campus</h5>
+                    <span class="badge bg-outline">2018 – 2021</span>
+                  </div>
+                  <p class="text-muted small mb-2">BSc Computing — Level 7</p>
+                  <p class="small mb-2">Completed ordinary degree with foundation in programming, databases, and web development.</p>
+                  <button class="btn btn-xs btn-outline-neon" type="button" data-bs-toggle="collapse" data-bs-target="#modules-level7">View Modules</button>
+                  <div class="collapse mt-3" id="modules-level7">
+                    <h6 class="small text-accent mb-2">Year 3 (2020-2021)</h6>
+                    <table class="table table-sm table-dark table-striped mb-3 small">
+                      <thead><tr><th>Module</th><th class="text-end">Grade</th></tr></thead>
+                      <tbody>
+                        <tr><td>Experiental Learning</td><td class="text-end">Pass</td></tr>
+                        <tr><td>Data Structures & Algorithms</td><td class="text-end">B</td></tr>
+                        <tr><td>Cloud Services & Distributed Computing</td><td class="text-end">B-</td></tr>
+                        <tr><td>Data Analysis</td><td class="text-end">B</td></tr>
+                        <tr><td>Big Data Technologies</td><td class="text-end">C</td></tr>
+                        <tr><td>Operating Systems</td><td class="text-end">B-</td></tr>
+                        <tr><td>Server-Side Web Development</td><td class="text-end">B</td></tr>
+                      </tbody>
+                    </table>
+                    <h6 class="small text-accent mb-2">Year 2 (2019-2020)</h6>
+                    <table class="table table-sm table-dark table-striped mb-3 small">
+                      <thead><tr><th>Module</th><th class="text-end">Grade</th></tr></thead>
+                      <tbody>
+                        <tr><td>Database Administration & Analysis </td><td class="text-end">B</td></tr>
+                        <tr><td>Management Science</td><td class="text-end">A</td></tr>
+                        <tr><td>Routing & Switching Essentials</td><td class="text-end">B</td></tr>
+                        <tr><td>Information Security</td><td class="text-end">B+</td></tr>
+                        <tr><td>Advanced Database Technologies</td><td class="text-end">C</td></tr>
+                        <tr><td>Discrete Mathematics 2</td><td class="text-end">C</td></tr>
+                        <tr><td>Network Fundamentals</td><td class="text-end">A</td></tr>
+                        <tr><td>Software Quality Assurance And Testing</td><td class="text-end">D</td></tr>
+                        <tr><td>Client-Side Web Development</td><td class="text-end">B-</td></tr>
+
+                      </tbody>
+                    </table>
+                    <h6 class="small text-accent mb-2">Year 1 (2018-2019)</h6>
+                    <table class="table table-sm table-dark table-striped mb-0 small">
+                      <thead><tr><th>Module</th><th class="text-end">Grade</th></tr></thead>
+                      <tbody>
+                        <tr><td>Social Media Communications</td><td class="text-end">C+</td></tr>
+                        <tr><td>Database Fundamentals</td><td class="text-end">A</td></tr>
+                        <tr><td>Operating Systems Fundamentals</td><td class="text-end">C+</td></tr>
+                        <tr><td>Statistics</td><td class="text-end">C+</td></tr>
+                        <tr><td>Software Development 2</td><td class="text-end">B</td></tr>
+                        <tr><td>Object Oriented Systems Analysis</td><td class="text-end">C+</td></tr>
+                        <tr><td>Computer Architecture</td><td class="text-end">B+</td></tr>
+                        <tr><td>Critical Skills Development</td><td class="text-end">B</td></tr>
+                        <tr><td>Business & Information Systems</td><td class="text-end">B-</td></tr>
+                        <tr><td>Discrete Mathematics 1</td><td class="text-end">B</td></tr>
+                        <tr><td>Software Development 1</td><td class="text-end">B+</td></tr>
+                        <tr><td>Visual Design & User Experience</td><td class="text-end">B+</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-secondary h-100">
+              <div class="panel-header mb-3">Education Path</div>
+              <p class="small mb-3">Completed Level 7 degree in 2021, gained industry experience, and now returning to complete Level 8 Honours degree.</p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="meta-pill">Level 7 ✓</span>
+                <span class="meta-pill">Level 8 In Progress</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-padding section-fade">
+      <div class="container">
+        <p class="section-kicker mb-1">03 · Work</p>
+        <h2 class="section-title mb-4">Projects</h2>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <button class="btn btn-sm btn-neon filter-btn active" data-filter="all">All</button>
+          <button class="btn btn-sm btn-outline-neon filter-btn" data-filter="year4">Year 4</button>
+          <button class="btn btn-sm btn-outline-neon filter-btn" data-filter="year3">Year 3</button>
+          <button class="btn btn-sm btn-outline-neon filter-btn" data-filter="year2">Year 2</button>
+        </div>
+        <div class="row g-4" id="projectsGrid">
+          <div class="col-md-6 col-lg-4 project-item" data-year="year4">
+            <article class="project-card h-100" role="button" tabindex="0"
+              data-title="POCT Glucometrics Dashboard"
+              data-year="Year 4" data-date="2025"
+              data-desc="A comprehensive healthcare monitoring system developed for Tallaght University Hospital's Point-of-Care Testing department."
+              data-features="Real-time tracking of ~140 glucometers|Medical color-coded alert system|Role-based access for 5 user types|Analytics dashboards|Automated email notifications"
+              data-tech="React,TypeScript,ASP.NET Core,SQL Server,Entity Framework,Chart.js"
+              data-github="https://github.com/TUDUBLIN-MF/docs-and-code-dylanbyrne-carr">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-year">Year 4</span>
+                <span class="small text-muted">2025</span>
+              </div>
+              <h5 class="project-title mb-2">POCT Glucometrics Dashboard</h5>
+              <p class="project-summary small mb-3">Healthcare monitoring system for Tallaght University Hospital. Tracks glucometers with medical alerts and role-based access.</p>
+              <div class="d-flex flex-wrap gap-1">
+                <span class="meta-pill">React</span>
+                <span class="meta-pill">TypeScript</span>
+                <span class="meta-pill">ASP.NET</span>
+              </div>
+              <div class="click-hint mt-3 small text-muted"><i class="bi bi-box-arrow-up-right me-1"></i>Click for details</div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-year="year3">
+            <article class="project-card h-100" role="button" tabindex="0"
+              data-title="Python Data Analysis"
+              data-year="Year 3" data-date="2021"
+              data-desc="Data analysis and visualisation project exploring real-world datasets using Python's scientific computing stack."
+              data-features="Exploratory data analysis|Interactive visualisations|Data cleaning pipelines|Correlation analysis|Jupyter documentation"
+              data-tech="Python,Pandas,NumPy,Seaborn,Matplotlib,Jupyter"
+              data-github="">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-year">Year 3</span>
+                <span class="small text-muted">2021</span>
+              </div>
+              <h5 class="project-title mb-2">Python Data Analysis</h5>
+              <p class="project-summary small mb-3">Data analysis and visualisation project using Python scientific stack with statistical analysis.</p>
+              <div class="d-flex flex-wrap gap-1">
+                <span class="meta-pill">Python</span>
+                <span class="meta-pill">Pandas</span>
+                <span class="meta-pill">Seaborn</span>
+              </div>
+              <div class="click-hint mt-3 small text-muted"><i class="bi bi-box-arrow-up-right me-1"></i>Click for details</div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 project-item" data-year="year2">
+            <article class="project-card h-100" role="button" tabindex="0"
+              data-title="Django E-Commerce Site"
+              data-year="Year 2" data-date="2020"
+              data-desc="A full-stack e-commerce platform with complete shopping functionality and payment processing."
+              data-features="Product catalog with search|Shopping cart|Stripe payment integration|User authentication|Wagtail CMS admin"
+              data-tech="Django,Python,Stripe API,Wagtail CMS,Bootstrap,PostgreSQL"
+              data-github="">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-year">Year 2</span>
+                <span class="small text-muted">2020</span>
+              </div>
+              <h5 class="project-title mb-2">Django E-Commerce Site</h5>
+              <p class="project-summary small mb-3">Full-stack e-commerce platform with product management, shopping cart, and Stripe payments.</p>
+              <div class="d-flex flex-wrap gap-1">
+                <span class="meta-pill">Django</span>
+                <span class="meta-pill">Stripe</span>
+                <span class="meta-pill">Wagtail</span>
+              </div>
+              <div class="click-hint mt-3 small text-muted"><i class="bi bi-box-arrow-up-right me-1"></i>Click for details</div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section-padding section-alt section-angled">
+      <div class="container">
+        <p class="section-kicker mb-1">04 · Career</p>
+        <h2 class="section-title mb-4">Experience</h2>
+        <div class="row g-4">
           <div class="col-lg-6">
-            <div class="hero-pill mb-3 text-uppercase small fw-semibold">
-              <span class="hero-dot me-2"></span>
-              Software Development Student
-            </div>
-            <h1 class="display-4 fw-bold mb-3">
-              <span class="text-outline">Dylan</span> Byrne-Carr
-            </h1>
-            <p class="lead mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              posuere erat a ante venenatis dapibus posuere velit aliquet.
-            </p>
-            <div class="hero-highlight mb-4">
-              <div class="d-flex flex-wrap gap-3">
-                <div class="stat-chip">
-                  <span class="label">Focus</span>
-                  <span class="value">Software Dev</span>
+            <div class="panel panel-primary h-100">
+              <div class="panel-header mb-3">McDonald's</div>
+              <div class="role-item mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <h5 class="mb-0">Shift Manager</h5>
+                  <span class="badge bg-outline">2021 – Present</span>
                 </div>
-                <div class="stat-chip">
-                  <span class="label">Location</span>
-                  <span class="value">Lorem Ipsum</span>
-                </div>
-                <div class="stat-chip">
-                  <span class="label">Status</span>
-                  <span class="value live">Open to Opportunities</span>
-                </div>
+                <ul class="small mb-0">
+                  <li>Leading teams of 15+ crew members per shift</li>
+                  <li>Managing inventory, cash handling, and daily operations</li>
+                  <li>Training new employees and maintaining quality standards</li>
+                </ul>
               </div>
-            </div>
-
-            <div class="d-flex flex-wrap gap-3">
-              <a href="#projects" class="btn btn-neon">
-                <i class="bi bi-controller me-1" aria-hidden="true"></i>
-                View Projects
-              </a>
-              <button
-                class="btn btn-outline-neon"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#contactModal"
-              >
-                <i class="bi bi-envelope-open me-1" aria-hidden="true"></i>
-                Quick Contact
-              </button>
+              <div class="role-item">
+                <div class="d-flex justify-content-between mb-1">
+                  <h5 class="mb-0">Crew Trainer</h5>
+                  <span class="badge bg-outline">2018 – 2021</span>
+                </div>
+                <ul class="small mb-0">
+                  <li>Trained new staff on procedures and customer service</li>
+                  <li>Maintained food safety and hygiene standards</li>
+                </ul>
+              </div>
             </div>
           </div>
-
-          <div class="col-lg-5 offset-lg-1">
-            <div class="driver-card">
-              <div
-                class="driver-header d-flex justify-content-between align-items-center mb-3"
-              >
-                <div>
-                  <div class="small text-uppercase text-muted">Profile</div>
-                  <div class="fw-semibold">DBC-27</div>
+          <div class="col-lg-6">
+            <div class="panel panel-secondary h-100">
+              <div class="panel-header mb-3">Smurfit Kappa</div>
+              <div class="role-item">
+                <div class="d-flex justify-content-between mb-1">
+                  <h5 class="mb-0">IT Support (Placement)</h5>
+                  <span class="badge bg-outline">2020 – 2021</span>
                 </div>
-                <div class="badge badge-feed">
-                  <span class="pulse-dot me-1"></span>
-                  Live Feed
-                </div>
-              </div>
-              <div class="driver-body">
-                <div class="row align-items-center g-3">
-                  <div class="col-5">
-                    <div class="avatar-frame">
-                      <!-- Placeholder image -->
-                      <img
-                        src="https://via.placeholder.com/400x400.png?text=Your+Photo"
-                        class="img-fluid rounded-3"
-                        alt="Placeholder portrait of Dylan Byrne-Carr"
-                      />
-                      <div class="avatar-overlay"></div>
-                    </div>
-                  </div>
-                  <div class="col-7">
-                    <div class="telemetry-grid">
-                      <div>
-                        <div class="tele-label">Lap Time</div>
-                        <div class="tele-value">01:27.538</div>
-                      </div>
-                      <div>
-                        <div class="tele-label">Sector Focus</div>
-                        <div class="tele-value">Backend · UI · Data</div>
-                      </div>
-                      <div>
-                        <div class="tele-label">Pace</div>
-                        <div class="tele-bar">
-                          <div class="tele-bar-fill" style="width: 78%"></div>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="tele-label">Next Pit Stop</div>
-                        <div class="tele-value">Placement / Grad Role</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="driver-footer mt-3 small text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur blandit tempus porttitor.
-                </div>
+                <ul class="small mb-0">
+                  <li>Provided technical support for 200+ employees</li>
+                  <li>Managed Active Directory user accounts</li>
+                  <li>Assisted with hardware deployment and maintenance</li>
+                  <li>Documented IT procedures and troubleshooting guides</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <!-- About -->
-      <section id="about" class="section-padding">
-        <div class="container">
-          <div
-            class="section-header d-flex justify-content-between align-items-center mb-4"
-          >
-            <div>
-              <p class="section-kicker">01 · Driver Overview</p>
-              <h2 class="section-title">About Me</h2>
+    <!-- Skills -->
+    <section id="skills" class="section-padding section-fade">
+      <div class="container">
+        <p class="section-kicker mb-1">05 · Abilities</p>
+        <h2 class="section-title mb-4">Skills</h2>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="panel panel-primary h-100">
+              <div class="panel-header mb-3">Technical Skills</div>
+              <div class="skill-group">
+                <div class="skill-row">
+                  <div class="d-flex justify-content-between small mb-1"><span>C# / .NET</span><span>85%</span></div>
+                  <div class="skill-bar" data-level="85"><div class="skill-fill"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="d-flex justify-content-between small mb-1"><span>Python</span><span>80%</span></div>
+                  <div class="skill-bar" data-level="80"><div class="skill-fill"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="d-flex justify-content-between small mb-1"><span>SQL / Databases</span><span>75%</span></div>
+                  <div class="skill-bar" data-level="75"><div class="skill-fill"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="d-flex justify-content-between small mb-1"><span>React / JavaScript</span><span>70%</span></div>
+                  <div class="skill-bar" data-level="70"><div class="skill-fill"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="d-flex justify-content-between small mb-1"><span>HTML / CSS</span><span>80%</span></div>
+                  <div class="skill-bar" data-level="80"><div class="skill-fill"></div></div>
+                </div>
+              </div>
             </div>
-            <span class="section-tag">Profile Panel</span>
           </div>
-
-          <div class="row g-4">
-            <div class="col-lg-8">
-              <div class="panel panel-primary h-100">
-                <div
-                  class="panel-header d-flex justify-content-between align-items-center mb-3"
-                >
-                  <span>Bio Stream</span>
-                  <span class="panel-status">
-                    <span class="status-dot"></span>
-                    Online
-                  </span>
-                </div>
-                <div class="panel-body">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent commodo cursus magna, vel scelerisque nisl
-                    consectetur et. Cras mattis consectetur purus sit amet
-                    fermentum. Donec id elit non mi porta gravida at eget metus.
-                  </p>
-                  <p>
-                    Sed posuere consectetur est at lobortis. Maecenas sed diam
-                    eget risus varius blandit sit amet non magna. Aenean eu leo
-                    quam. Pellentesque ornare sem lacinia quam venenatis
-                    vestibulum.
-                  </p>
-                </div>
+          <div class="col-lg-5">
+            <div class="panel panel-secondary mb-3">
+              <div class="panel-header mb-3">Languages & Tools</div>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="meta-pill">Python</span>
+                <span class="meta-pill">C#</span>
+                <span class="meta-pill">Java</span>
+                <span class="meta-pill">SQL</span>
+                <span class="meta-pill">React</span>
+                <span class="meta-pill">Django</span>
+                <span class="meta-pill">Bootstrap</span>
+                <span class="meta-pill">Git</span>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="panel panel-secondary mb-3">
-                <div class="panel-header mb-2">Telemetry Snapshot</div>
-                <div class="panel-body small">
-                  <div class="d-flex justify-content-between mb-1">
-                    <span>Focus Area</span
-                    ><span class="fw-semibold">Lorem Ipsum</span>
-                  </div>
-                  <div class="d-flex justify-content-between mb-1">
-                    <span>Strength</span
-                    ><span class="fw-semibold">Dolor Sit</span>
-                  </div>
-                  <div class="d-flex justify-content-between mb-1">
-                    <span>Preferred Stack</span
-                    ><span class="fw-semibold">Placeholder</span>
-                  </div>
-                  <div class="d-flex justify-content-between mb-1">
-                    <span>Current Season</span
-                    ><span class="fw-semibold">20XX / 20XX</span>
-                  </div>
+            <div class="panel panel-tertiary">
+              <div class="panel-header mb-3">Soft Skills</div>
+              <ul class="small mb-0">
+                <li>Team leadership & management</li>
+                <li>Training & mentoring</li>
+                <li>Problem solving</li>
+                <li>Time management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies" class="section-padding section-alt section-angled">
+      <div class="container">
+        <p class="section-kicker mb-1">06 · Personal</p>
+        <h2 class="section-title mb-4">Hobbies & Interests</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="hobby-card text-center">
+              <div class="hobby-icon mx-auto mb-2"><i class="bi bi-controller"></i></div>
+              <h6 class="mb-1">Gaming</h6>
+              <p class="small text-muted mb-0">Strategy & RPGs</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hobby-card text-center">
+              <div class="hobby-icon mx-auto mb-2"><i class="bi bi-music-note-beamed"></i></div>
+              <h6 class="mb-1">Music</h6>
+              <p class="small text-muted mb-0">Listening & playlists</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hobby-card text-center">
+              <div class="hobby-icon mx-auto mb-2"><i class="bi bi-film"></i></div>
+              <h6 class="mb-1">Movies & TV</h6>
+              <p class="small text-muted mb-0">Sci-Fi & Drama</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hobby-card text-center">
+              <div class="hobby-icon mx-auto mb-2"><i class="bi bi-car-front"></i></div>
+              <h6 class="mb-1">Formula 1</h6>
+              <p class="small text-muted mb-0">Following the sport</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hobby-card text-center">
+              <div class="hobby-icon mx-auto mb-2"><i class="bi bi-globe2"></i></div>
+              <h6 class="mb-1">Travel</h6>
+              <p class="small text-muted mb-0">Exploring new places</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hobby-card text-center">
+              <div class="hobby-icon mx-auto mb-2"><i class="bi bi-code-slash"></i></div>
+              <h6 class="mb-1">Coding</h6>
+              <p class="small text-muted mb-0">Side projects</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hobby-card text-center">
+              <div class="hobby-icon mx-auto mb-2"><i class="bi bi-cup-hot"></i></div>
+              <h6 class="mb-1">Coffee</h6>
+              <p class="small text-muted mb-0">Espresso enthusiast</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="hobby-card text-center">
+              <div class="hobby-icon mx-auto mb-2"><i class="bi bi-people"></i></div>
+              <h6 class="mb-1">Socialising</h6>
+              <p class="small text-muted mb-0">Friends & family</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-padding section-fade">
+      <div class="container">
+        <p class="section-kicker mb-1">07 · Get in Touch</p>
+        <h2 class="section-title mb-4">Contact</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="panel panel-primary h-100">
+              <div class="panel-header mb-3">Send a Message</div>
+              <form id="contactForm" action="https://formspree.io/f/mrbnlpzq" method="POST" target="_blank">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
                 </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-neon w-100">Send Message</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="panel panel-secondary h-100">
+              <div class="panel-header mb-3">Contact Info</div>
+              <div class="mb-3">
+                <i class="bi bi-envelope me-2"></i>dylanbyrnecarr@gmail.com
               </div>
-              <div class="panel panel-tertiary">
-                <div class="panel-header mb-2">Highlights</div>
-                <div class="panel-body">
-                  <ul class="list-unstyled mb-0 small">
-                    <li class="mb-1">
-                      <i
-                        class="bi bi-check2 me-1 text-accent"
-                        aria-hidden="true"
-                      ></i>
-                      Lorem ipsum dolor sit amet consectetur.
-                    </li>
-                    <li class="mb-1">
-                      <i
-                        class="bi bi-check2 me-1 text-accent"
-                        aria-hidden="true"
-                      ></i>
-                      Aenean lacinia bibendum nulla sed consectetur.
-                    </li>
-                    <li class="mb-1">
-                      <i
-                        class="bi bi-check2 me-1 text-accent"
-                        aria-hidden="true"
-                      ></i>
-                      Donec ullamcorper nulla non metus auctor fringilla.
-                    </li>
-                  </ul>
-                </div>
+              <div class="mb-3">
+                <i class="bi bi-telephone me-2"></i>085 152 2232
+              </div>
+              <div class="mb-3">
+                <i class="bi bi-geo-alt me-2"></i>Dublin, Ireland
+              </div>
+              <hr class="my-3">
+              <div class="d-flex flex-column gap-2">
+                <a href="https://www.linkedin.com/in/dylanbyrnecarr/" target="_blank" class="btn btn-outline-neon text-start">
+                  <i class="bi bi-linkedin me-2"></i>linkedin.com/in/dylanbyrnecarr
+                </a>
+                <a href="https://github.com/dylanbyrne-carr" target="_blank" class="btn btn-outline-neon text-start">
+                  <i class="bi bi-github me-2"></i>github.com/dylanbyrne-carr
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <!-- Education -->
-      <section id="education" class="section-padding section-alt">
-        <div class="container">
-          <div
-            class="section-header d-flex justify-content-between align-items-center mb-4"
-          >
-            <div>
-              <p class="section-kicker">02 · Season History</p>
-              <h2 class="section-title">Education</h2>
-            </div>
-            <span class="section-tag">Timeline View</span>
-          </div>
+  <footer class="footer py-4">
+    <div class="container text-center">
+      <p class="small text-muted mb-0">© 2025 Dylan Byrne-Carr. Built with Bootstrap 5.</p>
+    </div>
+  </footer>
 
-          <div class="row g-4">
-            <div class="col-lg-8">
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-1"
-                    >
-                      <h5 class="mb-0">Lorem Ipsum Institute</h5>
-                      <span class="badge bg-outline">20XX – Present</span>
-                    </div>
-                    <div class="text-muted small mb-2">
-                      BSc in Software Development · Placeholder City
-                    </div>
-                    <p class="small mb-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer posuere erat a ante venenatis dapibus.
-                    </p>
-                    <button
-                      class="btn btn-xs btn-outline-neon"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#modulesYear3"
-                      aria-expanded="false"
-                      aria-controls="modulesYear3"
-                    >
-                      View Modules / Grades
-                    </button>
-                    <div class="collapse mt-3" id="modulesYear3">
-                      <div class="table-responsive">
-                        <table
-                          class="table table-sm mb-0 table-dark table-striped align-middle"
-                        >
-                          <thead class="small text-uppercase text-muted">
-                            <tr>
-                              <th scope="col">Module</th>
-                              <th scope="col">Code</th>
-                              <th scope="col" class="text-end">Grade</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Lorem Ipsum Module</td>
-                              <td>ABC123</td>
-                              <td class="text-end">XX%</td>
-                            </tr>
-                            <tr>
-                              <td>Dolor Sit Amet</td>
-                              <td>DEF456</td>
-                              <td class="text-end">XX%</td>
-                            </tr>
-                            <tr>
-                              <td>Consectetur Adipiscing</td>
-                              <td>GHI789</td>
-                              <td class="text-end">XX%</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-1"
-                    >
-                      <h5 class="mb-0">Placeholder College</h5>
-                      <span class="badge bg-outline">20XX – 20XX</span>
-                    </div>
-                    <div class="text-muted small mb-2">
-                      Previous Studies · Placeholder
-                    </div>
-                    <p class="small mb-0">
-                      Cras mattis consectetur purus sit amet fermentum. Sed
-                      posuere consectetur est at lobortis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="panel panel-secondary h-100">
-                <div
-                  class="panel-header d-flex justify-content-between align-items-center mb-2"
-                >
-                  <span>Season Stats</span>
-                  <span class="badge badge-subtle">Analytics</span>
-                </div>
-                <div class="panel-body small">
-                  <div class="d-flex justify-content-between mb-2">
-                    <span>Overall Average</span>
-                    <span class="fw-semibold">XX%</span>
-                  </div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span>Best Module</span>
-                    <span class="fw-semibold">Lorem Ipsum</span>
-                  </div>
-                  <div class="d-flex justify-content-between mb-2">
-                    <span>Credits Completed</span>
-                    <span class="fw-semibold">XXX / XXX</span>
-                  </div>
-                  <div class="divider my-3"></div>
-                  <p class="mb-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean lacinia bibendum nulla sed consectetur.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content glass-modal">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Get in Touch</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects" class="section-padding">
-        <div class="container">
-          <div
-            class="section-header d-flex justify-content-between align-items-center mb-4"
-          >
-            <div>
-              <p class="section-kicker">03 · Race Portfolio</p>
-              <h2 class="section-title">Projects</h2>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-md-5">
+              <h6 class="text-muted small text-uppercase mb-3">Contact Info</h6>
+              <div class="mb-3 d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-envelope me-2"></i>dylanbyrnecarr@gmail.com</span>
+                <button class="btn btn-sm btn-outline-neon copy-btn" data-copy="dylanbyrnecarr@gmail.com"><i class="bi bi-clipboard"></i></button>
+              </div>
+              <div class="mb-3 d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-telephone me-2"></i>085 152 2232</span>
+                <button class="btn btn-sm btn-outline-neon copy-btn" data-copy="0851522232"><i class="bi bi-clipboard"></i></button>
+              </div>
+              <div class="mb-2">
+                <i class="bi bi-linkedin me-2"></i>
+                <a href="https://www.linkedin.com/in/dylanbyrnecarr/" target="_blank">linkedin.com/in/dylanbyrnecarr</a>
+              </div>
+              <div>
+                <i class="bi bi-github me-2"></i>
+                <a href="https://github.com/dylanbyrne-carr" target="_blank">github.com/dylanbyrne-carr</a>
+              </div>
             </div>
-            <span class="section-tag">Multi-Year View</span>
-          </div>
-
-          <div class="row align-items-center mb-4 g-3">
             <div class="col-md-7">
-              <div
-                class="filter-pills"
-                role="tablist"
-                aria-label="Project filters"
-              >
-                <button class="pill active" type="button" data-filter="all">
-                  All
-                </button>
-                <button class="pill" type="button" data-filter="year2">
-                  2nd Year
-                </button>
-                <button class="pill" type="button" data-filter="year3">
-                  3rd Year
-                </button>
-                <button class="pill" type="button" data-filter="year4">
-                  4th Year
-                </button>
-              </div>
-            </div>
-            <div class="col-md-5 text-md-end small text-muted">
-              Click on a project card for more details.
-            </div>
-          </div>
-
-          <div class="row g-4" id="projectsGrid">
-            <div class="col-md-6 col-lg-4 project-item" data-year="year2">
-              <article class="project-card h-100" tabindex="0">
-                <div
-                  class="project-header d-flex justify-content-between align-items-center mb-2"
-                >
-                  <span class="badge badge-year">2nd Year</span>
-                  <span class="small text-muted">20XX</span>
+              <h6 class="text-muted small text-uppercase mb-3">Send a Message</h6>
+              <form action="https://formspree.io/f/mrbnlpzq" method="POST" target="_blank">
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Your Name" name="name" required>
                 </div>
-                <h5 class="project-title mb-2">Lorem Ipsum Dashboard</h5>
-                <p class="project-summary small">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer posuere erat a ante venenatis dapibus.
-                </p>
-                <div class="project-meta small d-flex flex-wrap gap-2 mt-2">
-                  <span class="meta-pill">HTML</span>
-                  <span class="meta-pill">CSS</span>
-                  <span class="meta-pill">JavaScript</span>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email" name="email" required>
                 </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4 project-item" data-year="year3">
-              <article class="project-card h-100" tabindex="0">
-                <div
-                  class="project-header d-flex justify-content-between align-items-center mb-2"
-                >
-                  <span class="badge badge-year">3rd Year</span>
-                  <span class="small text-muted">20XX</span>
+                <div class="mb-3">
+                  <textarea class="form-control" placeholder="Your Message" name="message" rows="3" required></textarea>
                 </div>
-                <h5 class="project-title mb-2">Dolor Sit Amet App</h5>
-                <p class="project-summary small">
-                  Cras mattis consectetur purus sit amet fermentum. Curabitur
-                  blandit tempus porttitor.
-                </p>
-                <div class="project-meta small d-flex flex-wrap gap-2 mt-2">
-                  <span class="meta-pill">Placeholder</span>
-                  <span class="meta-pill">API</span>
-                  <span class="meta-pill">UI</span>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-md-6 col-lg-4 project-item" data-year="year4">
-              <article class="project-card h-100" tabindex="0">
-                <div
-                  class="project-header d-flex justify-content-between align-items-center mb-2"
-                >
-                  <span class="badge badge-year">4th Year</span>
-                  <span class="small text-muted">20XX</span>
-                </div>
-                <h5 class="project-title mb-2">Consectetur Analytics</h5>
-                <p class="project-summary small">
-                  Aenean lacinia bibendum nulla sed consectetur. Sed posuere
-                  consectetur est at lobortis.
-                </p>
-                <div class="project-meta small d-flex flex-wrap gap-2 mt-2">
-                  <span class="meta-pill">Data</span>
-                  <span class="meta-pill">Visualisation</span>
-                  <span class="meta-pill">Placeholder</span>
-                </div>
-              </article>
+                <button type="submit" class="btn btn-neon w-100">Send Message</button>
+              </form>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Experience -->
-      <section id="experience" class="section-padding section-alt">
-        <div class="container">
-          <div
-            class="section-header d-flex justify-content-between align-items-center mb-4"
-          >
-            <div>
-              <p class="section-kicker">04 · Pit Lane</p>
-              <h2 class="section-title">Work Experience</h2>
-            </div>
-            <span class="section-tag">Placement &amp; Roles</span>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-lg-7">
-              <div class="panel panel-primary h-100">
-                <div class="panel-header mb-3">Stints &amp; Placements</div>
-                <div class="panel-body">
-                  <div class="role-item mb-4">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-1"
-                    >
-                      <h5 class="mb-0">Lorem Ipsum Role</h5>
-                      <span class="badge bg-outline">20XX – 20XX</span>
-                    </div>
-                    <div class="text-muted small mb-2">
-                      Placeholder Company · Location
-                    </div>
-                    <ul class="small mb-0">
-                      <li>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </li>
-                      <li>
-                        Integer posuere erat a ante venenatis dapibus posuere
-                        velit aliquet.
-                      </li>
-                      <li>Donec id elit non mi porta gravida at eget metus.</li>
-                    </ul>
-                  </div>
-
-                  <div class="role-item">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-1"
-                    >
-                      <h5 class="mb-0">Dolor Sit Amet Internship</h5>
-                      <span class="badge bg-outline">20XX – 20XX</span>
-                    </div>
-                    <div class="text-muted small mb-2">
-                      Placeholder Organisation · Location
-                    </div>
-                    <ul class="small mb-0">
-                      <li>Cras mattis consectetur purus sit amet fermentum.</li>
-                      <li>Aenean lacinia bibendum nulla sed consectetur.</li>
-                      <li>Vestibulum id ligula porta felis euismod semper.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5">
-              <div class="panel panel-secondary mb-3">
-                <div class="panel-header mb-2">Workload Split</div>
-                <div class="panel-body">
-                  <div class="stacked-bars">
-                    <div class="stacked-bar">
-                      <span class="label">Development</span>
-                      <div class="bar">
-                        <span
-                          class="segment segment-1"
-                          style="width: 60%"
-                        ></span>
-                        <span
-                          class="segment segment-2"
-                          style="width: 25%"
-                        ></span>
-                        <span
-                          class="segment segment-3"
-                          style="width: 15%"
-                        ></span>
-                      </div>
-                    </div>
-                    <div class="stacked-bar">
-                      <span class="label">Collaboration</span>
-                      <div class="bar">
-                        <span
-                          class="segment segment-2"
-                          style="width: 45%"
-                        ></span>
-                        <span
-                          class="segment segment-3"
-                          style="width: 30%"
-                        ></span>
-                        <span
-                          class="segment segment-1"
-                          style="width: 25%"
-                        ></span>
-                      </div>
-                    </div>
-                    <div class="stacked-bar">
-                      <span class="label">Learning</span>
-                      <div class="bar">
-                        <span
-                          class="segment segment-3"
-                          style="width: 55%"
-                        ></span>
-                        <span
-                          class="segment segment-1"
-                          style="width: 25%"
-                        ></span>
-                        <span
-                          class="segment segment-2"
-                          style="width: 20%"
-                        ></span>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="small text-muted mt-3 mb-0">
-                    Placeholder breakdown inspired by analytical graphics;
-                    replace with your own experience splits.
-                  </p>
-                </div>
-              </div>
-
-              <div class="panel panel-tertiary">
-                <div class="panel-header mb-2">Key Takeaways</div>
-                <div class="panel-body small">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum id ligula porta felis euismod semper.
-                  </p>
-                  <p class="mb-0">
-                    Maecenas faucibus mollis interdum. Curabitur blandit tempus
-                    porttitor.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills & Achievements -->
-      <section id="skills" class="section-padding">
-        <div class="container">
-          <div
-            class="section-header d-flex justify-content-between align-items-center mb-4"
-          >
-            <div>
-              <p class="section-kicker">05 · Performance</p>
-              <h2 class="section-title">Skills &amp; Achievements</h2>
-            </div>
-            <span class="section-tag">Telemetry Inspired</span>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-lg-7">
-              <div class="panel panel-primary h-100">
-                <div
-                  class="panel-header mb-3 d-flex justify-content-between align-items-center"
-                >
-                  <span>Skill Telemetry</span>
-                  <span class="badge badge-subtle">Dynamic</span>
-                </div>
-                <div class="panel-body">
-                  <p class="small text-muted mb-3">
-                    Progress bars animate into view as you scroll, mimicking F1
-                    telemetry and data-driven graphics.
-                  </p>
-
-                  <div class="skill-group">
-                    <div class="skill-row">
-                      <div class="d-flex justify-content-between small mb-1">
-                        <span>Placeholder Skill 1</span>
-                        <span>90%</span>
-                      </div>
-                      <div class="skill-bar" data-level="90">
-                        <div class="skill-fill"></div>
-                      </div>
-                    </div>
-                    <div class="skill-row">
-                      <div class="d-flex justify-content-between small mb-1">
-                        <span>Placeholder Skill 2</span>
-                        <span>80%</span>
-                      </div>
-                      <div class="skill-bar" data-level="80">
-                        <div class="skill-fill"></div>
-                      </div>
-                    </div>
-                    <div class="skill-row">
-                      <div class="d-flex justify-content-between small mb-1">
-                        <span>Placeholder Skill 3</span>
-                        <span>75%</span>
-                      </div>
-                      <div class="skill-bar" data-level="75">
-                        <div class="skill-fill"></div>
-                      </div>
-                    </div>
-                    <div class="skill-row">
-                      <div class="d-flex justify-content-between small mb-1">
-                        <span>Placeholder Skill 4</span>
-                        <span>65%</span>
-                      </div>
-                      <div class="skill-bar" data-level="65">
-                        <div class="skill-fill"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5">
-              <div class="panel panel-secondary mb-3">
-                <div class="panel-header mb-2">Headline Achievements</div>
-                <div class="panel-body">
-                  <ul class="small mb-0 list-unstyled">
-                    <li class="mb-2">
-                      <span class="badge badge-accent me-2">P1</span>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </li>
-                    <li class="mb-2">
-                      <span class="badge badge-accent me-2">P2</span>
-                      Integer posuere erat a ante venenatis dapibus posuere
-                      velit aliquet.
-                    </li>
-                    <li class="mb-0">
-                      <span class="badge badge-accent me-2">P3</span>
-                      Aenean lacinia bibendum nulla sed consectetur.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="panel panel-tertiary">
-                <div class="panel-header mb-2">Tool Stack</div>
-                <div class="panel-body small">
-                  <p>
-                    Placeholder list of tools and technologies you use; replace
-                    with your real stack.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="meta-pill">Placeholder</span>
-                    <span class="meta-pill">Placeholder</span>
-                    <span class="meta-pill">Placeholder</span>
-                    <span class="meta-pill">Placeholder</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Hobbies / Interests -->
-      <section id="hobbies" class="section-padding section-alt">
-        <div class="container">
-          <div
-            class="section-header d-flex justify-content-between align-items-center mb-4"
-          >
-            <div>
-              <p class="section-kicker">06 · Off Track</p>
-              <h2 class="section-title">Hobbies &amp; Interests</h2>
-            </div>
-            <span class="section-tag">End of Page</span>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-lg-8">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="hobby-card h-100">
-                    <div class="hobby-icon mb-2">
-                      <i class="bi bi-headset" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-1">Placeholder Hobby 1</h5>
-                    <p class="small mb-0">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Integer posuere erat a ante.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="hobby-card h-100">
-                    <div class="hobby-icon mb-2">
-                      <i class="bi bi-joystick" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-1">Placeholder Hobby 2</h5>
-                    <p class="small mb-0">
-                      Cras mattis consectetur purus sit amet fermentum. Sed
-                      posuere consectetur est at lobortis.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="hobby-card h-100">
-                    <div class="hobby-icon mb-2">
-                      <i class="bi bi-music-note-beamed" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-1">Placeholder Hobby 3</h5>
-                    <p class="small mb-0">
-                      Aenean lacinia bibendum nulla sed consectetur. Maecenas
-                      faucibus mollis interdum.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="hobby-card h-100">
-                    <div class="hobby-icon mb-2">
-                      <i class="bi bi-globe2" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-1">Placeholder Hobby 4</h5>
-                    <p class="small mb-0">
-                      Curabitur blandit tempus porttitor. Donec ullamcorper
-                      nulla non metus auctor fringilla.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="panel panel-tertiary h-100">
-                <div class="panel-header mb-2">Balance Meter</div>
-                <div class="panel-body">
-                  <p class="small text-muted">
-                    Placeholder visualisation inspired by analytical graphics;
-                    replace with hobbies that show personality.
-                  </p>
-                  <div class="stacked-bars small">
-                    <div class="stacked-bar">
-                      <span class="label">Creative</span>
-                      <div class="bar">
-                        <span
-                          class="segment segment-1"
-                          style="width: 55%"
-                        ></span>
-                        <span
-                          class="segment segment-2"
-                          style="width: 25%"
-                        ></span>
-                        <span
-                          class="segment segment-3"
-                          style="width: 20%"
-                        ></span>
-                      </div>
-                    </div>
-                    <div class="stacked-bar">
-                      <span class="label">Technical</span>
-                      <div class="bar">
-                        <span
-                          class="segment segment-3"
-                          style="width: 50%"
-                        ></span>
-                        <span
-                          class="segment segment-1"
-                          style="width: 30%"
-                        ></span>
-                        <span
-                          class="segment segment-2"
-                          style="width: 20%"
-                        ></span>
-                      </div>
-                    </div>
-                    <div class="stacked-bar">
-                      <span class="label">Social</span>
-                      <div class="bar">
-                        <span
-                          class="segment segment-2"
-                          style="width: 40%"
-                        ></span>
-                        <span
-                          class="segment segment-3"
-                          style="width: 35%"
-                        ></span>
-                        <span
-                          class="segment segment-1"
-                          style="width: 25%"
-                        ></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="section-padding">
-        <div class="container">
-          <div
-            class="section-header d-flex justify-content-between align-items-center mb-4"
-          >
-            <div>
-              <p class="section-kicker">07 · Contact</p>
-              <h2 class="section-title">Contact Me</h2>
-            </div>
-            <span class="section-tag">Detailed Contact</span>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-lg-6">
-              <div class="panel panel-primary h-100">
-                <div
-                  class="panel-header mb-3 d-flex justify-content-between align-items-center"
-                >
-                  <span>Contact Form</span>
-                  <button
-                    class="btn btn-xs btn-outline-neon"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#contactModal"
-                  >
-                    Open Modal
-                  </button>
-                </div>
-                <div class="panel-body">
-                  <form id="contactForm" novalidate>
-                    <div class="mb-3">
-                      <label for="name" class="form-label">Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        placeholder="Your Name"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Please enter your name.
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="you@example.com"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Please enter a valid email address.
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="message" class="form-label">Message</label>
-                      <textarea
-                        class="form-control"
-                        id="message"
-                        rows="4"
-                        placeholder="Your message..."
-                        required
-                      ></textarea>
-                      <div class="invalid-feedback">
-                        Please enter a message.
-                      </div>
-                    </div>
-                    <button class="btn btn-neon w-100" type="submit">
-                      <i class="bi bi-send me-1" aria-hidden="true"></i>
-                      Send Message (Demo)
-                    </button>
-                    <div
-                      id="contactAlert"
-                      class="alert alert-success mt-3 d-none"
-                      role="alert"
-                    >
-                      This is a demo form. Replace with your own contact
-                      handling logic.
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="panel panel-secondary mb-3">
-                <div class="panel-header mb-2">Contact Details</div>
-                <div class="panel-body small">
-                  <p class="mb-3">
-                    Replace all placeholders with your real contact details and
-                    profiles before submitting this CA.
-                  </p>
-                  <div class="d-flex flex-column gap-2">
-                    <div class="d-flex align-items-center">
-                      <i
-                        class="bi bi-envelope-open me-2 text-accent"
-                        aria-hidden="true"
-                      ></i>
-                      <span>placeholder@example.com</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i
-                        class="bi bi-telephone me-2 text-accent"
-                        aria-hidden="true"
-                      ></i>
-                      <span>+353 (0) 00 000 0000</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i
-                        class="bi bi-linkedin me-2 text-accent"
-                        aria-hidden="true"
-                      ></i>
-                      <span>linkedin.com/in/placeholder</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i
-                        class="bi bi-github me-2 text-accent"
-                        aria-hidden="true"
-                      ></i>
-                      <span>github.com/placeholder</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="panel panel-tertiary">
-                <div class="panel-header mb-2">Availability</div>
-                <div class="panel-body">
-                  <p class="small mb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam quis risus eget urna mollis ornare vel eu leo.
-                  </p>
-                  <div class="row small">
-                    <div class="col-6 mb-2">
-                      <span class="text-muted d-block">Placement</span>
-                      <span class="fw-semibold">20XX / 20XX</span>
-                    </div>
-                    <div class="col-6 mb-2">
-                      <span class="text-muted d-block">Grad Roles</span>
-                      <span class="fw-semibold">20XX / 20XX</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-4 border-top footer">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
-      >
-        <div class="small text-muted">
-          &copy; <span id="currentYear"></span> Dylan Byrne-Carr. All rights
-          reserved.
-        </div>
-        <div class="small">
-          <a href="features.html" class="text-muted text-decoration-none me-3"
-            >Implementation Notes</a
-          >
-          <span class="badge bg-outline">CA 2 · Data Visualisation</span>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Contact Modal -->
-    <div
-      class="modal fade"
-      id="contactModal"
-      tabindex="-1"
-      aria-labelledby="contactModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content glass-modal">
-          <div class="modal-header border-0">
-            <h5 class="modal-title" id="contactModalLabel">Quick Contact</h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p class="small text-muted">
-              Replace all placeholders below with your real contact details
-              before submitting.
-            </p>
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-2">
-                <i
-                  class="bi bi-envelope-open me-2 text-accent"
-                  aria-hidden="true"
-                ></i>
-                placeholder@example.com
-              </li>
-              <li class="mb-2">
-                <i
-                  class="bi bi-telephone me-2 text-accent"
-                  aria-hidden="true"
-                ></i>
-                +353 (0) 00 000 0000
-              </li>
-              <li class="mb-2">
-                <i
-                  class="bi bi-linkedin me-2 text-accent"
-                  aria-hidden="true"
-                ></i>
-                linkedin.com/in/placeholder
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-github me-2 text-accent" aria-hidden="true"></i>
-                github.com/placeholder
-              </li>
-            </ul>
-          </div>
-          <div class="modal-footer border-0">
-            <button
-              type="button"
-              class="btn btn-outline-neon"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-neon" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Back to top -->
-    <button
-      id="backToTop"
-      class="back-to-top btn btn-neon btn-sm"
-      type="button"
-      aria-label="Back to top"
-    >
-      <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
-    </button>
+  <!-- Dynamic Project Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content glass-modal">
+        <div class="modal-header border-0">
+          <div>
+            <span class="badge badge-year me-2" id="pm-year"></span>
+            <span class="small text-muted" id="pm-date"></span>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h4 class="mb-3" id="pm-title"></h4>
+          <p id="pm-desc"></p>
+          <h6 class="text-accent mt-4 mb-2">Key Features</h6>
+          <ul id="pm-features"></ul>
+          <h6 class="text-accent mt-4 mb-2">Tech Stack</h6>
+          <div class="d-flex flex-wrap gap-2" id="pm-tech"></div>
+        </div>
+        <div class="modal-footer border-0" id="pm-footer">
+          <button type="button" class="btn btn-outline-neon" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Bootstrap JS (with Popper) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Back to Top -->
+  <button id="backToTop" class="back-to-top btn btn-neon btn-sm" type="button" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
 
-    <!-- Custom JS -->
-    <script src="assets/js/main.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
