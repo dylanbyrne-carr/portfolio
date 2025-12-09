@@ -12,7 +12,7 @@
   <!-- Nav -->
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
     <div class="container">
-      <a class="navbar-brand" href="#hero"><span class="me-2"></span>dbc</a>
+      <a class="navbar-brand" href="#hero">dbc</a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -68,7 +68,7 @@
           <div class="d-flex gap-3 mt-4">
             <a href="https://www.linkedin.com/in/dylanbyrnecarr/" target="_blank" class="hero-social"><i class="bi bi-linkedin"></i></a>
             <a href="https://github.com/dylanbyrne-carr" target="_blank" class="hero-social"><i class="bi bi-github"></i></a>
-            <a href="/cdn-cgi/l/email-protection#85e1fce9e4ebe7fcf7ebe0e6e4f7f7c5e2e8e4ece9abe6eae8" class="hero-social"><i class="bi bi-envelope-fill"></i></a>
+            <a href="mailto:dylanbyrnecarr@gmail.com" class="hero-social"><i class="bi bi-envelope-fill"></i></a>
           </div>
         </div>
         <div class="col-lg-5 text-center">
@@ -97,17 +97,13 @@
           </div>
           <div class="col-lg-4">
             <div class="panel panel-secondary h-100">
-              <div class="panel-header mb-3">Quick Facts</div>
-              <ul class="list-unstyled mb-0 small">
-                <li class="mb-2"><i class="bi bi-mortarboard me-2 text-accent"></i>TU Dublin Student</li>
-                <li class="mb-2"><i class="bi bi-code-slash me-2 text-accent"></i>Full-Stack Developer</li>
-                <li class="mb-2"><i class="bi bi-geo-alt me-2 text-accent"></i>Based in Dublin</li>
-                <li class="mb-2"><i class="bi bi-briefcase me-2 text-accent"></i>7+ Years Experience</li>
-                <li class="mb-2"><i class="bi bi-people me-2 text-accent"></i>Team Leadership</li>
-                <li class="mb-2"><i class="bi bi-lightning me-2 text-accent"></i>Fast Learner</li>
-                <li class="mb-2"><i class="bi bi-database me-2 text-accent"></i>SQL & Databases</li>
-                <li class="mb-2"><i class="bi bi-cup-hot me-2 text-accent"></i>Coffee Enthusiast</li>
-                <li class="mb-2"><i class="bi bi-controller me-2 text-accent"></i>Gamer</li>
+              <div class="panel-header mb-3 text-center">Quick Facts</div>
+              <ul class="quick-facts-list mb-0">
+                <li><i class="bi bi-mortarboard me-2"></i>TU Dublin Student</li>
+                <li><i class="bi bi-code-slash me-2"></i>Full-Stack Developer</li>
+                <li><i class="bi bi-geo-alt me-2"></i>Based in Dublin</li>
+                <li><i class="bi bi-clock-history me-2"></i>7+ Years Experience</li>
+                <li><i class="bi bi-flag me-2"></i>F1 Fan</li>
               </ul>
             </div>
           </div>
@@ -175,7 +171,7 @@
                     <table class="table table-sm table-dark table-striped mb-3 small">
                       <thead><tr><th>Module</th><th class="text-end">Grade</th></tr></thead>
                       <tbody>
-                        <tr><td>Database Administration & Analysis </td><td class="text-end">B</td></tr>
+                        <tr><td>Database Administration & Analysis</td><td class="text-end">B</td></tr>
                         <tr><td>Management Science</td><td class="text-end">A</td></tr>
                         <tr><td>Routing & Switching Essentials</td><td class="text-end">B</td></tr>
                         <tr><td>Information Security</td><td class="text-end">B+</td></tr>
@@ -419,63 +415,63 @@
       </div>
     </section>
 
-    <!-- Hobbies -->
+    <!-- Hobbies with Dublin images -->
     <section id="hobbies" class="section-padding section-alt section-angled">
       <div class="container">
         <p class="section-kicker mb-1">06 · Personal</p>
         <h2 class="section-title mb-4">Hobbies & Interests</h2>
         <div class="row g-3">
           <div class="col-6 col-md-3">
-            <div class="hobby-card text-center">
+            <div class="hobby-card text-center" data-hobby="gaming">
               <div class="hobby-icon mx-auto mb-2"><i class="bi bi-controller"></i></div>
               <h6 class="mb-1">Gaming</h6>
               <p class="small text-muted mb-0">Strategy & RPGs</p>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="hobby-card text-center">
+            <div class="hobby-card text-center" data-hobby="music">
               <div class="hobby-icon mx-auto mb-2"><i class="bi bi-music-note-beamed"></i></div>
               <h6 class="mb-1">Music</h6>
               <p class="small text-muted mb-0">Listening & playlists</p>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="hobby-card text-center">
+            <div class="hobby-card text-center" data-hobby="movies">
               <div class="hobby-icon mx-auto mb-2"><i class="bi bi-film"></i></div>
               <h6 class="mb-1">Movies & TV</h6>
               <p class="small text-muted mb-0">Sci-Fi & Drama</p>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="hobby-card text-center">
+            <div class="hobby-card text-center" data-hobby="f1">
               <div class="hobby-icon mx-auto mb-2"><i class="bi bi-car-front"></i></div>
               <h6 class="mb-1">Formula 1</h6>
               <p class="small text-muted mb-0">Following the sport</p>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="hobby-card text-center">
+            <div class="hobby-card text-center" data-hobby="travel">
               <div class="hobby-icon mx-auto mb-2"><i class="bi bi-globe2"></i></div>
               <h6 class="mb-1">Travel</h6>
               <p class="small text-muted mb-0">Exploring new places</p>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="hobby-card text-center">
+            <div class="hobby-card text-center" data-hobby="coding">
               <div class="hobby-icon mx-auto mb-2"><i class="bi bi-code-slash"></i></div>
               <h6 class="mb-1">Coding</h6>
               <p class="small text-muted mb-0">Side projects</p>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="hobby-card text-center">
+            <div class="hobby-card text-center" data-hobby="coffee">
               <div class="hobby-icon mx-auto mb-2"><i class="bi bi-cup-hot"></i></div>
               <h6 class="mb-1">Coffee</h6>
               <p class="small text-muted mb-0">Espresso enthusiast</p>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="hobby-card text-center">
+            <div class="hobby-card text-center" data-hobby="social">
               <div class="hobby-icon mx-auto mb-2"><i class="bi bi-people"></i></div>
               <h6 class="mb-1">Socialising</h6>
               <p class="small text-muted mb-0">Friends & family</p>
@@ -515,7 +511,7 @@
             <div class="panel panel-secondary h-100">
               <div class="panel-header mb-3">Contact Info</div>
               <div class="mb-3">
-                <i class="bi bi-envelope me-2"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="197d607578777b606b777c7a786b6b597e74787075377a7674">[email&#160;protected]</a>
+                <i class="bi bi-envelope me-2"></i><a href="mailto:dylanbyrnecarr@gmail.com">dylanbyrnecarr@gmail.com</a>
               </div>
               <div class="mb-3">
                 <i class="bi bi-telephone me-2"></i>085 152 2232
@@ -558,7 +554,7 @@
             <div class="col-md-5">
               <h6 class="text-muted small text-uppercase mb-3">Contact Info</h6>
               <div class="mb-3 d-flex justify-content-between align-items-center">
-                <span><i class="bi bi-envelope me-2"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7d3cedbd6d9d5cec5d9d2d4d6c5c5f7d0dad6dedb99d4d8da">[email&#160;protected]</a></span>
+                <span><i class="bi bi-envelope me-2"></i><a href="mailto:dylanbyrnecarr@gmail.com">dylanbyrnecarr@gmail.com</a></span>
                 <button class="btn btn-sm btn-outline-neon copy-btn" data-copy="dylanbyrnecarr@gmail.com"><i class="bi bi-clipboard"></i></button>
               </div>
               <div class="mb-3 d-flex justify-content-between align-items-center">
@@ -598,7 +594,7 @@
     </div>
   </div>
 
-  <!-- Dynamic Project Modal -->
+  <!-- Project Modal -->
   <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content glass-modal">
@@ -630,7 +626,7 @@
   </button>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

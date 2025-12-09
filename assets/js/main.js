@@ -1,10 +1,9 @@
 // Main custom JS for portfolio
-// Includes: theme toggle, scroll interactions, skills animation, project filters, contact form
 
 (function () {
   const root = document.documentElement;
 
-  // Theme toggle (dark / light) -------------------------------------------
+  // Theme toggle -----------------------------------------------------------
   const THEME_KEY = "dbc-portfolio-theme";
   const themeToggle = document.getElementById("themeToggle");
 
@@ -14,7 +13,6 @@
     } else {
       root.classList.remove("theme-light");
     }
-    // Update icon to match theme
     updateThemeIcon(theme === "light");
   }
 
@@ -22,34 +20,21 @@
     if (!themeToggle) return;
     const icon = themeToggle.querySelector("i");
     if (icon) {
-      // Show sun in dark mode (click to go light), moon in light mode (click to go dark)
       icon.className = isLight ? "bi bi-moon-stars-fill" : "bi bi-sun-fill";
     }
   }
 
   function getStoredTheme() {
-    try {
-      return localStorage.getItem(THEME_KEY);
-    } catch {
-      return null;
-    }
+    try { return localStorage.getItem(THEME_KEY); } catch { return null; }
   }
 
   function setStoredTheme(theme) {
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch {
-      // ignore storage errors
-    }
+    try { localStorage.setItem(THEME_KEY, theme); } catch {}
   }
 
-  // Initialize theme on load
   const initialTheme = getStoredTheme();
-  if (initialTheme) {
-    applyTheme(initialTheme);
-  }
+  if (initialTheme) applyTheme(initialTheme);
 
-  // Theme toggle click handler
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {
       const isLight = root.classList.contains("theme-light");
@@ -59,26 +44,18 @@
     });
   }
 
-  // Back to top button & navbar scroll state --------------------------------
+  // Back to top & navbar scroll state --------------------------------------
   const backToTop = document.getElementById("backToTop");
   const navbar = document.getElementById("mainNav");
   
   function handleScroll() {
     const scrollY = window.scrollY;
-    
-    // Back to top visibility
-    if (backToTop) {
-      backToTop.classList.toggle("show", scrollY > 320);
-    }
-    
-    // Navbar background on scroll
-    if (navbar) {
-      navbar.classList.toggle("scrolled", scrollY > 50);
-    }
+    if (backToTop) backToTop.classList.toggle("show", scrollY > 320);
+    if (navbar) navbar.classList.toggle("scrolled", scrollY > 50);
   }
   
   window.addEventListener("scroll", handleScroll);
-  handleScroll(); // Initial call
+  handleScroll();
 
   if (backToTop) {
     backToTop.addEventListener("click", () => {
@@ -86,7 +63,7 @@
     });
   }
 
-  // Skills telemetry (animate on scroll) ----------------------------------
+  // Skills animation -------------------------------------------------------
   const skillBars = document.querySelectorAll(".skill-bar");
   if (skillBars.length) {
     const observer = new IntersectionObserver(
@@ -103,12 +80,11 @@
       },
       { threshold: 0.4 }
     );
-
     skillBars.forEach((bar) => observer.observe(bar));
   }
 
   // Project filter buttons -------------------------------------------------
-  const filterButtons = document.querySelectorAll(".filter-pills .pill");
+  const filterButtons = document.querySelectorAll(".filter-btn");
   const projectItems = document.querySelectorAll(".project-item");
 
   if (filterButtons.length && projectItems.length) {
@@ -116,64 +92,32 @@
       btn.addEventListener("click", () => {
         const filter = btn.getAttribute("data-filter");
 
-        // Update active state
         filterButtons.forEach((b) => {
-          b.classList.remove("active");
-          b.setAttribute("aria-selected", "false");
+          b.classList.remove("active", "btn-neon");
+          b.classList.add("btn-outline-neon");
         });
-        btn.classList.add("active");
-        btn.setAttribute("aria-selected", "true");
+        btn.classList.add("active", "btn-neon");
+        btn.classList.remove("btn-outline-neon");
 
-        // Filter projects with animation
         projectItems.forEach((item) => {
           const year = item.getAttribute("data-year");
           const shouldShow = filter === "all" || year === filter;
-          
-          if (shouldShow) {
-            item.classList.remove("d-none");
-            item.style.opacity = "0";
-            item.style.transform = "translateY(10px)";
-            requestAnimationFrame(() => {
-              item.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-              item.style.opacity = "1";
-              item.style.transform = "translateY(0)";
-            });
-          } else {
-            item.style.opacity = "0";
-            item.style.transform = "translateY(10px)";
-            setTimeout(() => {
-              item.classList.add("d-none");
-            }, 300);
-          }
+          item.classList.toggle("d-none", !shouldShow);
         });
       });
     });
-
-    // Add ARIA attributes for accessibility
-    filterButtons.forEach((btn, index) => {
-      btn.setAttribute("role", "tab");
-      btn.setAttribute("aria-selected", btn.classList.contains("active") ? "true" : "false");
-    });
   }
 
-  // Toast notification helper ----------------------------------------------
+  // Toast notification -----------------------------------------------------
   function showToast(message, type = "success") {
-    // Remove any existing toast
     const existingToast = document.querySelector(".toast-notification");
-    if (existingToast) {
-      existingToast.remove();
-    }
+    if (existingToast) existingToast.remove();
 
-    // Create toast element
     const toast = document.createElement("div");
     toast.className = `toast-notification ${type}`;
-    toast.innerHTML = `
-      <i class="bi ${type === "success" ? "bi-check-circle" : "bi-exclamation-circle"} me-2"></i>
-      ${message}
-    `;
+    toast.innerHTML = `<i class="bi ${type === "success" ? "bi-check-circle" : "bi-exclamation-circle"} me-2"></i>${message}`;
     document.body.appendChild(toast);
 
-    // Remove after 4 seconds
     setTimeout(() => {
       toast.style.animation = "slideIn 0.3s ease reverse";
       setTimeout(() => toast.remove(), 300);
@@ -191,34 +135,15 @@
         showToast("Please fill in all required fields correctly.", "error");
         return;
       }
-      // Form is valid - let it submit to Formspree
       form.classList.add("was-validated");
     });
-
-    // Real-time validation feedback
-    const inputs = form.querySelectorAll("input, textarea");
-    inputs.forEach((input) => {
-      input.addEventListener("blur", () => {
-        if (form.classList.contains("was-validated")) {
-          input.classList.toggle("is-invalid", !input.checkValidity());
-          input.classList.toggle("is-valid", input.checkValidity());
-        }
-      });
-    });
   }
 
-  // Footer year ------------------------------------------------------------
-  const yearSpan = document.getElementById("currentYear");
-  if (yearSpan) {
-    yearSpan.textContent = String(new Date().getFullYear());
-  }
-
-  // Smooth scroll for anchor links -----------------------------------------
+  // Smooth scroll ----------------------------------------------------------
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
       if (href === "#") return;
-      
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
@@ -227,13 +152,12 @@
     });
   });
 
-  // Navbar active state on scroll with sliding indicator ----------------------
+  // Nav indicator ----------------------------------------------------------
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-lineup .nav-link");
   const navWrapper = document.querySelector(".nav-lineup-wrapper");
 
   if (sections.length && navLinks.length && navWrapper) {
-    // Create sliding indicator and append to wrapper
     const indicator = document.createElement("span");
     indicator.className = "nav-indicator";
     navWrapper.appendChild(indicator);
@@ -269,29 +193,15 @@
           });
         }
       });
-
       moveIndicator(activeLink);
     }
 
     window.addEventListener("scroll", updateActiveNav);
     window.addEventListener("resize", updateActiveNav);
-    
-    // Initial call after small delay to ensure layout is ready
     setTimeout(updateActiveNav, 100);
   }
 
-  // Project cards keyboard interaction -------------------------------------
-  const projectCards = document.querySelectorAll(".project-card[tabindex='0']");
-  projectCards.forEach((card) => {
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        card.click(); // Trigger modal
-      }
-    });
-  });
-
-  // Section scroll animations -----------------------------------------------
+  // Section scroll animations ----------------------------------------------
   const animatedSections = document.querySelectorAll(".section-padding");
   
   if ("IntersectionObserver" in window && animatedSections.length) {
@@ -303,48 +213,21 @@
           }
         });
       },
-      {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-      }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
-
-    animatedSections.forEach((section) => {
-      sectionObserver.observe(section);
-    });
+    animatedSections.forEach((section) => sectionObserver.observe(section));
   } else {
-    // Fallback: just show everything
-    animatedSections.forEach((section) => {
-      section.classList.add("in-view");
-    });
+    animatedSections.forEach((section) => section.classList.add("in-view"));
   }
 
-  // =========================================================================
+  // ========================================================================
   // INTERACTIVE FEATURES
-  // =========================================================================
+  // ========================================================================
 
-  // 1. Dynamic Greeting based on time of day --------------------------------
-  const greetingEl = document.getElementById("greeting");
-  if (greetingEl) {
-    const hour = new Date().getHours();
-    let greeting = "Hello";
-    if (hour >= 5 && hour < 12) greeting = "Good morning";
-    else if (hour >= 12 && hour < 18) greeting = "Good afternoon";
-    else if (hour >= 18 && hour < 22) greeting = "Good evening";
-    else greeting = "Good night";
-    greetingEl.textContent = greeting;
-  }
-
-  // 2. Typewriter Effect ----------------------------------------------------
+  // Typewriter Effect ------------------------------------------------------
   const typewriterEl = document.getElementById("typewriter");
   if (typewriterEl) {
-    const phrases = [
-      "Full-Stack Developer",
-      "Problem Solver",
-      "Team Leader",
-      "Creative Thinker",
-      "Quick Learner"
-    ];
+    const phrases = ["Full-Stack Developer", "Problem Solver", "Team Leader", "Creative Thinker", "Quick Learner"];
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -364,7 +247,6 @@
       }
 
       if (!isDeleting && charIndex === currentPhrase.length) {
-        // Pause at end of phrase
         typeSpeed = 2000;
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
@@ -375,12 +257,10 @@
 
       setTimeout(typeWrite, typeSpeed);
     }
-
-    // Start after a short delay
     setTimeout(typeWrite, 1000);
   }
 
-  // 3. Animated Counters ----------------------------------------------------
+  // Animated Counters ------------------------------------------------------
   const counters = document.querySelectorAll(".counter");
   if (counters.length) {
     const counterObserver = new IntersectionObserver(
@@ -402,7 +282,6 @@
                 counter.textContent = target;
               }
             };
-
             updateCounter();
             counterObserver.unobserve(counter);
           }
@@ -410,52 +289,40 @@
       },
       { threshold: 0.5 }
     );
-
     counters.forEach((counter) => counterObserver.observe(counter));
   }
 
-  // 4. Copy to Clipboard ----------------------------------------------------
+  // Copy to Clipboard ------------------------------------------------------
   const copyButtons = document.querySelectorAll(".copy-btn");
   copyButtons.forEach((btn) => {
     btn.addEventListener("click", async () => {
       const textToCopy = btn.dataset.copy;
       try {
         await navigator.clipboard.writeText(textToCopy);
-        // Change icon to checkmark
         const icon = btn.querySelector("i");
         icon.className = "bi bi-check-lg";
         btn.classList.add("btn-success");
         btn.classList.remove("btn-outline-neon");
-        
-        // Show toast
         showToast("Copied to clipboard!");
-        
-        // Reset after 2 seconds
         setTimeout(() => {
           icon.className = "bi bi-clipboard";
           btn.classList.remove("btn-success");
           btn.classList.add("btn-outline-neon");
         }, 2000);
       } catch (err) {
-        showToast("Failed to copy", true);
+        showToast("Failed to copy", "error");
       }
     });
   });
 
-  // 5. Keyboard Navigation --------------------------------------------------
+  // Keyboard Navigation ----------------------------------------------------
   document.addEventListener("keydown", (e) => {
-    // Only if not typing in an input
     if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
     
     const sectionKeys = {
-      "1": "#about",
-      "2": "#education",
-      "3": "#projects",
-      "4": "#experience",
-      "5": "#skills",
-      "6": "#hobbies",
-      "7": "#contact",
-      "0": "#hero"
+      "1": "#about", "2": "#education", "3": "#projects",
+      "4": "#experience", "5": "#skills", "6": "#hobbies",
+      "7": "#contact", "0": "#hero"
     };
 
     if (sectionKeys[e.key]) {
@@ -468,11 +335,71 @@
     }
   });
 
-  // 7. Theme Toggle Celebration (subtle) ------------------------------------
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      // Add a subtle animation
-      document.body.style.transition = "background 0.5s ease";
+  // Hero Parallax Effect ----------------------------------------------------
+  const heroSection = document.querySelector(".hero-section");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  
+  if (heroSection && !prefersReducedMotion) {
+    window.addEventListener("scroll", () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * 0.5;
+      heroSection.style.setProperty("--parallax-offset", `${rate}px`);
+    }, { passive: true });
+  }
+
+  // Project Modal Handler --------------------------------------------------
+  const projectCards = document.querySelectorAll(".project-card[role='button']");
+  const projectModal = document.getElementById("projectModal");
+  
+  if (projectCards.length && projectModal) {
+    const bsModal = new bootstrap.Modal(projectModal);
+    
+    projectCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        document.getElementById("pm-title").textContent = card.dataset.title || "";
+        document.getElementById("pm-year").textContent = card.dataset.year || "";
+        document.getElementById("pm-date").textContent = card.dataset.date || "";
+        document.getElementById("pm-desc").textContent = card.dataset.desc || "";
+        
+        const featuresList = document.getElementById("pm-features");
+        featuresList.innerHTML = "";
+        (card.dataset.features || "").split("|").filter(f => f).forEach(f => {
+          const li = document.createElement("li");
+          li.textContent = f;
+          featuresList.appendChild(li);
+        });
+        
+        const techContainer = document.getElementById("pm-tech");
+        techContainer.innerHTML = "";
+        (card.dataset.tech || "").split(",").filter(t => t).forEach(t => {
+          const span = document.createElement("span");
+          span.className = "meta-pill";
+          span.textContent = t;
+          techContainer.appendChild(span);
+        });
+        
+        const footer = document.getElementById("pm-footer");
+        const existingGithub = footer.querySelector(".github-link");
+        if (existingGithub) existingGithub.remove();
+        
+        if (card.dataset.github) {
+          const githubBtn = document.createElement("a");
+          githubBtn.href = card.dataset.github;
+          githubBtn.target = "_blank";
+          githubBtn.className = "btn btn-outline-neon github-link";
+          githubBtn.innerHTML = '<i class="bi bi-github me-1"></i>View on GitHub';
+          footer.insertBefore(githubBtn, footer.firstChild);
+        }
+        
+        bsModal.show();
+      });
+      
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          card.click();
+        }
+      });
     });
   }
 
