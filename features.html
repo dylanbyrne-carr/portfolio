@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Implementation Notes | Portfolio</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="py-5">
+    <div class="container">
+      <header class="mb-4">
+        <a href="index.html" class="btn btn-outline-secondary btn-sm mb-3">
+          &larr; Back to Portfolio
+        </a>
+        <h1 class="h3 fw-semibold mb-1">Implementation Notes</h1>
+        <p class="text-muted small mb-0">
+          This page is for your CA submission only. Replace the placeholder text
+          with accurate information about your implementation and hosting.
+        </p>
+      </header>
+
+      <main class="row g-4">
+        <section class="col-lg-7">
+          <div class="panel panel-primary mb-3">
+            <div class="panel-header mb-2">Bootstrap Components Used</div>
+            <div class="panel-body small">
+              <p>
+                Replace the bullet points below with a complete list of
+                Bootstrap components and utilities you used in
+                <code>index.html</code>.
+              </p>
+              <ul>
+                <li>
+                  Navbar (<code>.navbar</code>, responsive collapse, scrollspy)
+                </li>
+                <li>
+                  Buttons and button styles (<code>.btn</code>,
+                  <code>.btn-outline-*</code>)
+                </li>
+                <li>
+                  Grid system (<code>.container</code>, <code>.row</code>,
+                  <code>.col-*</code>)
+                </li>
+                <li>
+                  Cards / panels (custom design built on Bootstrap spacing &amp;
+                  borders)
+                </li>
+                <li>Modal component for contact details</li>
+                <li>Tables for education &amp; modules</li>
+                <li>Badges and pills</li>
+                <li>
+                  Forms and validation states (<code>.form-control</code>, etc.)
+                </li>
+                <li>Utility classes (spacing, text, display, flex, etc.)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel panel-secondary mb-3">
+            <div class="panel-header mb-2">Custom JavaScript Features</div>
+            <div class="panel-body small">
+              <p>
+                Summarise the dynamic features you implemented with your own
+                JavaScript (in
+                <code>assets/js/main.js</code>). The list below matches what is
+                currently coded; edit it as needed if you change anything.
+              </p>
+              <ul>
+                <li>
+                  Theme toggle button that switches between dark (default) and
+                  light theme, with preference stored in
+                  <code>localStorage</code>.
+                </li>
+                <li>
+                  Animated skill bars that use the Intersection Observer API to
+                  animate into view when scrolled into the viewport (F1
+                  telemetry style).
+                </li>
+                <li>
+                  Project filter buttons that show/hide project cards based on
+                  year (2nd, 3rd, 4th).
+                </li>
+                <li>
+                  Back-to-top button that appears after scrolling and uses
+                  smooth scroll to return to the top of the page.
+                </li>
+                <li>
+                  Basic contact form validation using the browser’s constraint
+                  API and a demo success message (no backend submission).
+                </li>
+                <li>
+                  Automatic insertion of the current year in the footer so it
+                  stays up to date.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-lg-5">
+          <div class="panel panel-tertiary mb-3">
+            <div class="panel-header mb-2">Hosting URL</div>
+            <div class="panel-body small">
+              <p>
+                When your site is hosted on Azure, GitHub Pages, or another
+                platform, paste the final public URL here:
+              </p>
+              <p class="mb-1"><strong>Live URL:</strong></p>
+              <p class="mb-3">
+                <code>https://your-hosting-url.example.com</code>
+                <br />
+                <span class="text-muted">
+                  Replace the placeholder with your actual deployed link before
+                  submitting the CA.
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="panel panel-secondary">
+            <div class="panel-header mb-2">How to Customise</div>
+            <div class="panel-body small">
+              <ol class="mb-0">
+                <li class="mb-2">
+                  Open <code>index.html</code> and replace all lorem ipsum and
+                  placeholder text with your real content (name, about,
+                  education, projects, etc.).
+                </li>
+                <li class="mb-2">
+                  Update the placeholder contact details in both the main
+                  contact section and the contact modal.
+                </li>
+                <li class="mb-2">
+                  Edit any placeholder skills, hobbies, and charts so they
+                  reflect your actual skills and interests.
+                </li>
+                <li class="mb-2">
+                  Deploy the site to your chosen hosting platform, confirm it
+                  loads correctly on mobile, tablet, and desktop, and then
+                  update the live URL above.
+                </li>
+                <li>
+                  Finally, ensure this page accurately lists all Bootstrap
+                  components and dynamic features you used so it matches your
+                  final submission.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
