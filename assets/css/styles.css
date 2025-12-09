@@ -261,21 +261,14 @@ h1, h2, h3, h4, h5, h6 { color: var(--text); }
 .panel { padding: 1.5rem; }
 .panel-header { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
 
-.quick-facts-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.quick-facts-list li {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
+/* List Group (Quick Facts) */
+.list-group-item {
+  background: transparent;
+  border-color: var(--border);
   color: var(--text);
+  padding: 0.6rem 0;
 }
-.quick-facts-list li i { color: var(--accent); }
+.list-group-item i { color: var(--accent); }
 
 /* ============================================
    PROJECT CARDS
@@ -491,12 +484,17 @@ h1, h2, h3, h4, h5, h6 { color: var(--text); }
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  border: 1px solid var(--accent);
+  background: var(--bg-elevated);
+  color: var(--accent);
+  cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background 0.2s ease;
   z-index: 1040;
 }
+#backToTop:hover { background: var(--accent); color: #fff; }
 #backToTop.show { opacity: 1; visibility: visible; transform: translateY(0); }
 
 .toast-notification {
